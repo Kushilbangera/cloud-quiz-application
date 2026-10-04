@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Result | Cloud Quiz Application</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .result-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background: #f5f7fb;
+        }
+
+        .result-card {
+            width: 100%;
+            max-width: 650px;
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .result-icon {
+            font-size: 65px;
+            margin-bottom: 10px;
+        }
+
+        .result-card h1 {
+            margin-bottom: 10px;
+        }
+
+        .result-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .score-circle {
+            width: 170px;
+            height: 170px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #f0f4ff;
+            border: 8px solid #4f46e5;
+        }
+
+        .score-circle strong {
+            font-size: 42px;
+            color: #4f46e5;
+        }
+
+        .score-circle span {
+            color: #666;
+        }
+
+        .result-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            padding: 20px 10px;
+            background: #f8f9fc;
+            border-radius: 15px;
+        }
+
+        .stat-box strong {
+            display: block;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .stat-box span {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .correct {
+            color: #16a34a;
+        }
+
+        .wrong {
+            color: #dc2626;
+        }
+
+        .total {
+            color: #4f46e5;
+        }
+
+        .performance {
+            margin-bottom: 30px;
+            padding: 18px;
+            border-radius: 14px;
+            background: #f8f9fc;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .result-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .result-actions button {
+            border: none;
+            padding: 13px 24px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .retake-btn {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .dashboard-btn {
+            background: #e5e7eb;
+            color: #222;
+        }
+
+        @media (max-width: 600px) {
+            .result-card {
+                padding: 25px;
+            }
+
+            .result-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="result-container">
+
+    <div class="result-card">
+
+        <div class="result-icon">🏆</div>
+
+        <h1>Quiz Completed!</h1>
+
+        <p class="result-subtitle" id="quizTitle">
+            Your quiz result is ready
+        </p>
+
+        <div class="score-circle">
+            <strong id="percentage">0%</strong>
+            <span>Score</span>
+        </div>
+
+        <div class="result-stats">
+
+            <div class="stat-box">
+                <strong class="correct" id="correctAnswers">0</strong>
+                <span>Correct</span>
+            </div>
+
+            <div class="stat-box">
+                <strong class="wrong" id="wrongAnswers">0</strong>
+                <span>Wrong</span>
+            </div>
+
+            <div class="stat-box">
+                <strong class="total" id="totalQuestions">0</strong>
+                <span>Total</span>
+            </div>
+
+        </div>
+
+        <div class="performance" id="performanceMessage">
+            Keep learning and try again! 💪
+        </div>
+
+        <div class="result-actions">
+
+            <button
+                class="retake-btn"
+                id="retakeBtn">
+                🔄 Retake Quiz
+            </button>
+
+            <button
+                class="dashboard-btn"
+                id="dashboardBtn">
+                🏠 Dashboard
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/result.js"></script>
+
+</body>
+</html>

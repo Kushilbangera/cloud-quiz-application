@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>QuizCloud - Dashboard</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <!-- LOGO -->
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <span>
+                Quiz<span class="logo-highlight">Cloud</span>
+            </span>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <nav class="sidebar-nav">
+
+            <!-- Dashboard -->
+            <a
+                href="dashboard.html"
+                class="nav-item active"
+            >
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <!-- IMPORTANT:
+                 Go to quiz selection instead of quiz.html
+            -->
+            <a
+                href="quiz-selection.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-circle-question"></i>
+                <span>Quizzes</span>
+            </a>
+
+
+            <!-- Leaderboard -->
+            <a
+                href="leaderboard.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-ranking-star"></i>
+                <span>Leaderboard</span>
+            </a>
+
+
+            <!-- My Progress -->
+<a
+    href="progress.html"
+    class="nav-item"
+    id="myProgressLink"
+>
+    <i class="fa-solid fa-chart-line"></i>
+    <span>My Progress</span>
+</a>
+           
+
+
+            <!-- Achievements -->
+            <a href="achievements.html" class="nav-item">
+    <i class="fa-solid fa-medal"></i>
+    <span>Achievements</span>
+</a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+        <div class="sidebar-bottom">
+
+            <!-- PREMIUM CARD -->
+            <div class="sidebar-premium">
+
+                <div class="premium-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+
+                <h4>Go Premium</h4>
+
+                <p>
+                    Unlock advanced quizzes,
+                    analytics and certificates.
+                </p>
+
+                <button id="sidebarUpgradeBtn">
+                    Upgrade Now
+                </button>
+
+            </div>
+
+
+            <!-- LOGOUT -->
+            <button
+                class="logout-btn"
+                id="logoutBtn"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <!-- Mobile menu -->
+            <div
+                class="mobile-menu"
+                id="mobileMenu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="quizSearch"
+                    placeholder="Search quizzes, subjects or topics..."
+                >
+
+            </div>
+
+
+            <!-- TOP RIGHT -->
+            <div class="topbar-actions">
+
+                <!-- Notification -->
+                <button class="icon-btn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- PROFILE -->
+                <div class="profile-mini">
+
+                    <div
+                        class="avatar"
+                        id="userAvatar"
+                    >
+                        K
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong id="topUserName">
+                            Kushil
+                        </strong>
+
+                        <span id="topUserPlan">
+                            Free Plan
+                        </span>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             DASHBOARD CONTAINER
+        ================================================== -->
+
+        <section class="dashboard-container">
+
+
+            <!-- =================================================
+                 WELCOME HERO
+            ================================================== -->
+
+            <div class="welcome-section">
+
+                <div class="welcome-content">
+
+                    <span class="welcome-label">
+                        Welcome back 👋
+                    </span>
+
+
+                    <h1>
+                        Keep learning,
+                        <span id="welcomeName">
+                            Kushil
+                        </span>!
+                    </h1>
+
+
+                    <p>
+                        Challenge yourself, improve your skills
+                        and climb the leaderboard.
+                    </p>
+
+
+                    <!-- IMPORTANT:
+                         Start Quiz now goes to quiz selection
+                    -->
+                    <button
+                        class="primary-btn"
+                        id="startQuizBtn"
+                    >
+                        <i class="fa-solid fa-play"></i>
+                        Start a Quiz
+                    </button>
+
+                </div>
+
+
+                <!-- HERO ILLUSTRATION -->
+                <div class="welcome-illustration">
+
+                    <div class="floating-card card-one">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        <span>
+                            +50 XP
+                        </span>
+
+                    </div>
+
+
+                    <div class="floating-card card-two">
+
+                        <i class="fa-solid fa-trophy"></i>
+
+                        <span>
+                            Top 10%
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-cap">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATS
+            ================================================== -->
+
+            <div class="stats-grid">
+
+
+                <!-- STREAK -->
+                <div class="stat-card">
+
+                    <div class="stat-icon streak-icon">
+
+                        <i class="fa-solid fa-fire"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Current Streak
+                        </span>
+
+                        <strong id="streakValue">
+                            7 Days
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- XP -->
+                <div class="stat-card">
+
+                    <div class="stat-icon xp-icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total XP
+                        </span>
+
+                        <strong id="xpValue">
+                            850 XP
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACCURACY -->
+                <div class="stat-card">
+
+                    <div class="stat-icon accuracy-icon">
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Accuracy
+                        </span>
+
+                        <strong id="accuracyValue">
+                            82%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUIZ COUNT -->
+                <div class="stat-card">
+
+                    <div class="stat-icon quiz-icon">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Quizzes Completed
+                        </span>
+
+                        <strong id="quizCountValue">
+                            12
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FREE / PREMIUM PLAN
+            ================================================== -->
+
+            <div
+                class="plan-banner"
+                id="planBanner"
+            >
+
+                <div class="plan-banner-icon">
+
+                    <i class="fa-solid fa-crown"></i>
+
+                </div>
+
+
+                <div class="plan-banner-content">
+
+                    <span id="planBadge">
+                        FREE PLAN
+                    </span>
+
+
+                    <h3 id="planTitle">
+                        Unlock your full potential
+                    </h3>
+
+
+                    <p id="planDescription">
+                        Get access to advanced quizzes,
+                        analytics, mock exams and certificates.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="premium-btn"
+                    id="upgradeBtn"
+                >
+
+                    Upgrade for ₹499
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONTINUE LEARNING
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            KEEP GOING
+                        </span>
+
+                        <h2>
+                            Continue Learning
+                        </h2>
+
+                    </div>
+
+
+                    <!-- FIXED:
+                         quiz.html → quiz-selection.html
+                    -->
+                    <a href="quiz-selection.html">
+
+                        View All
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="learning-grid"
+                    id="continueLearning"
+                >
+
+                    <!-- Generated by dashboard.js -->
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EDUCATION LEVELS
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            EXPLORE
+                        </span>
+
+                        <h2>
+                            Choose Your Learning Path
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="education-grid">
+
+
+                    <!-- HIGHER SCHOOL -->
+                    <div
+                        class="education-card school-card"
+                        data-level="school"
+                    >
+
+                        <div class="education-icon">
+
+                            <i class="fa-solid fa-school"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                CLASS 6 – 10
+                            </span>
+
+                            <h3>
+                                Higher School
+                            </h3>
+
+                            <p>
+                                Maths, Science,
+                                Social Studies and more.
+                            </p>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-arrow-right card-arrow"
+                        ></i>
+
+                    </div>
+
+
+
+                    <!-- PCMB -->
+                    <div
+                        class="education-card pcmb-card"
+                        data-level="pcmb"
+                    >
+
+                        <div class="education-icon">
+
+                            <i class="fa-solid fa-flask"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                PUC / HIGHER SECONDARY
+                            </span>
+
+                            <h3>
+                                PCMB
+                            </h3>
+
+                            <p>
+                                Physics, Chemistry,
+                                Mathematics & Biology.
+                            </p>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-arrow-right card-arrow"
+                        ></i>
+
+                    </div>
+
+
+
+                    <!-- UG -->
+                    <div
+                        class="education-card ug-card"
+                        data-level="ug"
+                    >
+
+                        <div class="education-icon">
+
+                            <i class="fa-solid fa-laptop-code"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                UNDERGRADUATE
+                            </span>
+
+                            <h3>
+                                UG Courses
+                            </h3>
+
+                            <p>
+                                CSE, ECE, EEE, Civil,
+                                Mechanical and more.
+                            </p>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-arrow-right card-arrow"
+                        ></i>
+
+                    </div>
+
+
+
+                    <!-- PG -->
+                    <div
+                        class="education-card pg-card"
+                        data-level="pg"
+                    >
+
+                        <div class="education-icon">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                POSTGRADUATE
+                            </span>
+
+                            <h3>
+                                PG Courses
+                            </h3>
+
+                            <p>
+                                MCA, M.Tech, MSc,
+                                MBA and more.
+                            </p>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-arrow-right card-arrow"
+                        ></i>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RECOMMENDED QUIZZES
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            RECOMMENDED FOR YOU
+                        </span>
+
+                        <h2>
+                            Popular Quizzes
+                        </h2>
+
+                    </div>
+
+
+                    <!-- FIXED:
+                         quiz.html → quiz-selection.html
+                    -->
+                    <a href="quiz-selection.html">
+
+                        Explore All
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="quiz-grid"
+                    id="quizGrid"
+                >
+
+                    <!-- Generated by dashboard.js -->
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PREMIUM FEATURES
+            ================================================== -->
+
+            <section
+                class="dashboard-section premium-features-section"
+                id="premiumFeatures"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label premium-label">
+                            👑 PREMIUM
+                        </span>
+
+                        <h2>
+                            Level Up Your Learning
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="premium-feature-grid">
+
+
+                    <!-- ANALYTICS -->
+                    <div class="premium-feature-card">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        <h3>
+                            Advanced Analytics
+                        </h3>
+
+                        <p>
+                            Understand your accuracy,
+                            strengths and weak topics.
+                        </p>
+
+                    </div>
+
+
+                    <!-- MOCK EXAMS -->
+                    <div class="premium-feature-card">
+
+                        <i class="fa-solid fa-file-circle-check"></i>
+
+                        <h3>
+                            Mock Exams
+                        </h3>
+
+                        <p>
+                            Practice complete
+                            exam-style question papers.
+                        </p>
+
+                    </div>
+
+
+                    <!-- CERTIFICATES -->
+                    <div class="premium-feature-card">
+
+                        <i class="fa-solid fa-certificate"></i>
+
+                        <h3>
+                            Certificates
+                        </h3>
+
+                        <p>
+                            Earn certificates after
+                            completing selected quizzes.
+                        </p>
+
+                    </div>
+
+
+                    <!-- LEADERBOARD -->
+                    <div class="premium-feature-card">
+
+                        <i class="fa-solid fa-ranking-star"></i>
+
+                        <h3>
+                            Advanced Leaderboard
+                        </h3>
+
+                        <p>
+                            Compete across subjects,
+                            courses and education levels.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 LEADERBOARD
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            COMPETE
+                        </span>
+
+                        <h2>
+                            Leaderboard
+                        </h2>
+
+                    </div>
+
+
+                    <a href="leaderboard.html">
+
+                        Full Leaderboard
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="leaderboard-card">
+
+
+                    <!-- TABS -->
+                    <div class="leaderboard-tabs">
+
+                        <button
+                            class="leaderboard-tab active"
+                        >
+                            Global
+                        </button>
+
+
+                        <button
+                            class="leaderboard-tab"
+                        >
+                            Weekly
+                        </button>
+
+
+                        <button
+                            class="leaderboard-tab"
+                        >
+                            My Rank
+                        </button>
+
+                    </div>
+
+
+                    <!-- LEADERBOARD DATA -->
+                    <div
+                        class="leaderboard-list"
+                        id="leaderboardPreview"
+                    >
+
+                        <!-- Generated by dashboard.js -->
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 QuizCloud.
+                    Learn. Challenge. Achieve.
+                </p>
+
+
+                <div>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                    <a href="#">
+                        Help
+                    </a>
+
+                </div>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         PREMIUM MODAL
+    ====================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="premiumModal"
+    >
+
+        <div class="premium-modal">
+
+
+            <!-- CLOSE -->
+            <button
+                class="modal-close"
+                id="closePremiumModal"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <!-- CROWN -->
+            <div class="modal-crown">
+
+                <i class="fa-solid fa-crown"></i>
+
+            </div>
+
+
+            <span class="modal-label">
+                QUIZCLOUD PREMIUM
+            </span>
+
+
+            <h2>
+                Unlock the full
+                learning experience
+            </h2>
+
+
+            <p>
+                Get unlimited access to advanced quizzes,
+                analytics, mock exams and certificates.
+            </p>
+
+
+            <!-- PRICE -->
+            <div class="premium-price">
+
+                <strong>
+                    ₹499
+                </strong>
+
+                <span>
+                    / plan
+                </span>
+
+            </div>
+
+
+            <!-- FEATURES -->
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Unlimited quizzes
+                </li>
+
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Advanced difficulty levels
+                </li>
+
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Detailed performance analytics
+                </li>
+
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Mock exams and certificates
+                </li>
+
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Advanced leaderboard
+                </li>
+
+            </ul>
+
+
+            <!-- UPGRADE -->
+            <button
+                class="modal-upgrade-btn"
+                id="modalUpgradeBtn"
+            >
+
+                Upgrade to Premium
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+<!-- =====================================================
+     LEADERBOARD
+     ===================================================== -->
+
+<section class="leaderboard-section">
+
+    <div class="leaderboard-header">
+
+        <div class="leaderboard-title">
+
+            <div class="leaderboard-title-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+
+            <div>
+                <h2>Leaderboard</h2>
+                <p>See how you rank against other learners</p>
+            </div>
+
+        </div>
+
+        <a href="leaderboard.html" class="leaderboard-view-btn">
+            View Full Leaderboard
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <!-- Tabs -->
+
+    <div class="leaderboard-tabs">
+
+        <button
+            class="leaderboard-tab active"
+            type="button">
+            <i class="fas fa-globe"></i>
+            Global
+        </button>
+
+        <button
+            class="leaderboard-tab"
+            type="button">
+            <i class="fas fa-calendar-week"></i>
+            Weekly
+        </button>
+
+        <button
+            class="leaderboard-tab"
+            type="button">
+            <i class="fas fa-calendar-alt"></i>
+            Monthly
+        </button>
+
+    </div>
+
+
+    <!-- Leaderboard Data -->
+
+    <div
+        id="leaderboardPreview"
+        class="leaderboard-list">
+
+        <div class="leaderboard-loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            Loading leaderboard...
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =====================================================
+         AUTHENTICATION
+    ====================================================== -->
+
+    <script src="js/auth.js?v=4"></script>
+
+
+    <!-- =====================================================
+         DASHBOARD LOGIC
+    ====================================================== -->
+
+    
+
+
+    <!-- =====================================================
+         SAFETY NAVIGATION FIX
+         
+         This ensures Start a Quiz always opens the
+         quiz-selection page.
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const startQuizBtn =
+                document.getElementById("startQuizBtn");
+
+            if (startQuizBtn) {
+
+                startQuizBtn.addEventListener("click", function () {
+
+                    window.location.href =
+                        "quiz-selection.html";
+
+                });
+
+            }
+
+
+            /*
+             * Education cards
+             * Clicking any learning path opens
+             * the quiz selection screen.
+             */
+
+            const educationCards =
+                document.querySelectorAll(".education-card");
+
+            educationCards.forEach(function (card) {
+
+                card.addEventListener("click", function () {
+
+                    window.location.href =
+                        "quiz-selection.html";
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

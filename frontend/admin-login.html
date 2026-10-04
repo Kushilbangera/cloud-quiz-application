@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | QuizCloud</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>.auth-message{margin-top:14px;font-weight:700;font-size:13px}.auth-message.error{color:#dc2626}.auth-message.success{color:#059669}</style>
+  </head>
+  <body>
+    <div class="auth-shell">
+      <div class="auth-box">
+        <div class="brand" style="margin-bottom: 20px;">
+          <span class="brand-mark">Q</span>
+          QuizCloud
+        </div>
+
+        <h1>Admin login</h1>
+        <p class="muted">Access the management dashboard for users and plans.</p>
+
+        <form id="adminLoginForm">
+          <div class="form-group">
+            <label for="adminEmail">Admin email</label>
+            <input id="adminEmail" name="adminEmail" type="email" autocomplete="username" required />
+          </div>
+
+          <div class="form-group">
+            <label for="adminPassword">Password</label>
+            <input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password" required />
+          </div>
+
+          <div class="form-actions">
+            <a href="login.html" class="button secondary">User Login</a>
+            <button type="submit" class="button primary">Login</button>
+          </div>
+        <div id="adminLoginMessage" class="auth-message" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/auth.js?v=3"></script>
+  </body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Leaderboard | QuizCloud</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/leaderboard.css?v=1">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- NAVBAR -->
+    <header class="topbar">
+
+        <div class="brand">
+            <div class="brand-icon">
+                <i class="fas fa-bolt"></i>
+            </div>
+
+            <span>Quiz<span>Cloud</span></span>
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Dashboard
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="leaderboard-container">
+
+        <!-- HERO -->
+        <section class="leaderboard-hero">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    <i class="fas fa-trophy"></i>
+                    GLOBAL RANKINGS
+                </div>
+
+                <h1>
+                    Compete.
+                    <span>Climb.</span>
+                    Conquer.
+                </h1>
+
+                <p>
+                    See how you rank against learners across QuizCloud.
+                    Complete quizzes, earn XP and climb the leaderboard.
+                </p>
+
+            </div>
+
+            <div class="hero-trophy">
+
+                <div class="trophy-glow"></div>
+
+                <div class="trophy-circle">
+                    <i class="fas fa-trophy"></i>
+                </div>
+
+                <div class="floating-star star-one">
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <div class="floating-star star-two">
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <div class="floating-star star-three">
+                    <i class="fas fa-star"></i>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TABS -->
+        <div class="leaderboard-tabs">
+
+            <button
+                class="tab active"
+                data-period="global"
+                type="button"
+            >
+                <i class="fas fa-globe"></i>
+                Global
+            </button>
+
+            <button
+                class="tab"
+                data-period="weekly"
+                type="button"
+            >
+                <i class="fas fa-calendar-week"></i>
+                Weekly
+            </button>
+
+            <button
+                class="tab"
+                data-period="monthly"
+                type="button"
+            >
+                <i class="fas fa-calendar-alt"></i>
+                Monthly
+            </button>
+
+        </div>
+
+
+        <!-- TOP THREE -->
+        <section class="podium-section" id="podiumSection">
+
+            <div class="podium-card second">
+
+                <div class="rank-badge silver">
+                    2
+                </div>
+
+                <div class="podium-avatar" id="secondAvatar">
+                    ?
+                </div>
+
+                <div class="podium-medal">
+                    <i class="fas fa-medal"></i>
+                </div>
+
+                <h3 id="secondName">
+                    —
+                </h3>
+
+                <p>
+                    <span id="secondScore">0</span>%
+                </p>
+
+                <div class="podium-base">
+                    <span>2</span>
+                </div>
+
+            </div>
+
+
+            <div class="podium-card first">
+
+                <div class="crown">
+                    <i class="fas fa-crown"></i>
+                </div>
+
+                <div class="rank-badge gold">
+                    1
+                </div>
+
+                <div class="podium-avatar" id="firstAvatar">
+                    ?
+                </div>
+
+                <div class="podium-medal">
+                    <i class="fas fa-trophy"></i>
+                </div>
+
+                <h3 id="firstName">
+                    —
+                </h3>
+
+                <p>
+                    <span id="firstScore">0</span>%
+                </p>
+
+                <div class="podium-base">
+                    <span>1</span>
+                </div>
+
+            </div>
+
+
+            <div class="podium-card third">
+
+                <div class="rank-badge bronze">
+                    3
+                </div>
+
+                <div class="podium-avatar" id="thirdAvatar">
+                    ?
+                </div>
+
+                <div class="podium-medal">
+                    <i class="fas fa-medal"></i>
+                </div>
+
+                <h3 id="thirdName">
+                    —
+                </h3>
+
+                <p>
+                    <span id="thirdScore">0</span>%
+                </p>
+
+                <div class="podium-base">
+                    <span>3</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+        <section class="leaderboard-stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    <i class="fas fa-users"></i>
+                </div>
+
+                <div>
+                    <span>Players</span>
+                    <strong id="playerCount">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    <i class="fas fa-fire"></i>
+                </div>
+
+                <div>
+                    <span>Total XP</span>
+                    <strong id="totalXP">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+
+                <div>
+                    <span>Top Score</span>
+                    <strong id="topScore">0%</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RANKING -->
+        <section class="ranking-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="small-label">
+                        <i class="fas fa-ranking-star"></i>
+                        RANKINGS
+                    </span>
+
+                    <h2>Top Players</h2>
+
+                    <p>
+                        Keep playing to improve your position.
+                    </p>
+                </div>
+
+                <div class="live-indicator">
+                    <span></span>
+                    Live Rankings
+                </div>
+
+            </div>
+
+
+            <!-- LOADING -->
+            <div id="loadingState" class="loading-state">
+
+                <div class="loader"></div>
+
+                <p>
+                    Loading leaderboard...
+                </p>
+
+            </div>
+
+
+            <!-- EMPTY -->
+            <div id="emptyState" class="empty-state hidden">
+
+                <div class="empty-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+
+                <h3>No rankings yet</h3>
+
+                <p>
+                    Complete your first quiz and become the first
+                    player on the leaderboard.
+                </p>
+
+                <a href="quiz-selection.html" class="start-btn">
+                    <i class="fas fa-play"></i>
+                    Start a Quiz
+                </a>
+
+            </div>
+
+
+            <!-- TABLE -->
+            <div
+                id="rankingList"
+                class="ranking-list hidden"
+            >
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/auth.js?v=4"></script>
+    <script src="js/leaderboard.js?v=1"></script>
+
+</body>
+</html>

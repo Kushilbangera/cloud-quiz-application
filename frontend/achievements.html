@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizCloud — Achievements</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/achievements.css?v=1">
+</head>
+
+<body>
+
+    <!-- MOBILE OVERLAY -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <div class="logo-text">
+                <strong>QuizCloud</strong>
+                <span>Learn • Play • Win</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-label">MAIN MENU</p>
+
+            <a href="dashboard.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="quiz-selection.html" class="nav-item">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>Quiz Arena</span>
+            </a>
+
+            <a href="leaderboard.html" class="nav-item">
+                <i class="fa-solid fa-trophy"></i>
+                <span>Leaderboard</span>
+            </a>
+
+            <a href="progress.html" class="nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>My Progress</span>
+            </a>
+
+            <a href="achievements.html" class="nav-item active">
+                <i class="fa-solid fa-medal"></i>
+                <span>Achievements</span>
+            </a>
+
+        </nav>
+
+        <!-- PREMIUM -->
+        <div class="sidebar-premium">
+
+            <div class="premium-icon">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+
+            <h3>Go Premium</h3>
+
+            <p>
+                Unlock advanced analytics,
+                certificates and more.
+            </p>
+
+            <button id="sidebarUpgradeBtn">
+                Upgrade Now
+            </button>
+
+        </div>
+
+        <button class="logout-btn" id="logoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="topbar-title">
+                <h1>Achievements</h1>
+                <p>Keep learning and unlock new rewards.</p>
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="icon-btn">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <div class="profile-mini">
+                    <div class="profile-avatar" id="profileAvatar">
+                        K
+                    </div>
+
+                    <div class="profile-info">
+                        <strong id="profileName">Student</strong>
+                        <span id="profileEmail">Loading...</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE -->
+        <div class="page-container">
+
+
+            <!-- HERO -->
+            <section class="achievement-hero">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-medal"></i>
+                        Achievement Center
+                    </div>
+
+                    <h1>
+                        Your Learning
+                        <span>Journey</span>
+                    </h1>
+
+                    <p>
+                        Complete quizzes, build streaks,
+                        earn XP and unlock achievements.
+                    </p>
+
+                    <div class="hero-stats">
+
+                        <div class="hero-stat">
+                            <i class="fa-solid fa-star"></i>
+                            <div>
+                                <strong id="heroXP">0</strong>
+                                <span>Total XP</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-stat">
+                            <i class="fa-solid fa-fire"></i>
+                            <div>
+                                <strong id="heroStreak">0</strong>
+                                <span>Day Streak</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-stat">
+                            <i class="fa-solid fa-medal"></i>
+                            <div>
+                                <strong id="heroUnlocked">0</strong>
+                                <span>Unlocked</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-medal">
+
+                    <div class="medal-circle">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+
+                    <div class="floating-star star-one">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div class="floating-star star-two">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div class="floating-star star-three">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SUMMARY -->
+            <section class="achievement-summary">
+
+                <div class="summary-card">
+
+                    <div class="summary-icon purple">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Quizzes Completed</span>
+                        <strong id="totalQuizzes">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon green">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+
+                    <div>
+                        <span>Best Score</span>
+                        <strong id="bestScore">0%</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon orange">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <div>
+                        <span>XP Earned</span>
+                        <strong id="totalXP">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon blue">
+                        <i class="fa-solid fa-lock-open"></i>
+                    </div>
+
+                    <div>
+                        <span>Achievements</span>
+                        <strong id="achievementCount">0 / 8</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ACHIEVEMENTS -->
+            <section class="achievements-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Your Achievements</h2>
+                        <p>
+                            Unlock badges by completing challenges.
+                        </p>
+                    </div>
+
+                    <div class="achievement-progress">
+                        <span id="achievementProgressText">
+                            0% Complete
+                        </span>
+
+                        <div class="progress-track">
+                            <div
+                                class="progress-fill"
+                                id="achievementProgress">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="achievement-grid"
+                    id="achievementGrid">
+
+                    <div class="loading-achievements">
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+                        Loading achievements...
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MOTIVATION -->
+            <section class="motivation-card">
+
+                <div class="motivation-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <div class="motivation-content">
+
+                    <h2>Keep Going!</h2>
+
+                    <p id="motivationText">
+                        Complete more quizzes to unlock
+                        exciting achievements.
+                    </p>
+
+                </div>
+
+                <a href="quiz-selection.html"
+                    class="motivation-btn">
+
+                    Start a Quiz
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="page-footer">
+
+                <p>
+                    © 2026 QuizCloud. Learn smarter. Play better.
+                </p>
+
+                <div>
+                    <span>Cloud Based Quiz Application</span>
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/auth.js?v=50"></script>
+    <script src="js/achievements.js?v=1"></script>
+
+</body>
+
+</html>

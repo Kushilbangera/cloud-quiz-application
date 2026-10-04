@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>QuizCloud — My Progress</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Progress Page CSS -->
+    <link
+        rel="stylesheet"
+        href="css/progress.css?v=50"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <!-- LOGO -->
+
+        <a
+            href="dashboard.html"
+            class="logo"
+        >
+
+            <i class="fas fa-brain"></i>
+
+            <span>
+                QuizCloud
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="dashboard.html"
+                class="sidebar-link"
+            >
+
+                <i class="fas fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="quiz-selection.html"
+                class="sidebar-link"
+            >
+
+                <i class="fas fa-gamepad"></i>
+
+                <span>
+                    Quiz Arena
+                </span>
+
+            </a>
+
+
+            <a
+                href="leaderboard.html"
+                class="sidebar-link"
+            >
+
+                <i class="fas fa-trophy"></i>
+
+                <span>
+                    Leaderboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="progress.html"
+                class="sidebar-link active"
+            >
+
+                <i class="fas fa-chart-line"></i>
+
+                <span>
+                    My Progress
+                </span>
+
+            </a>
+
+
+            <a
+    href="achievements.html"
+    class="sidebar-link"
+    id="achievementsLink"
+>
+    <i class="fas fa-medal"></i>
+    <span>
+        Achievements
+    </span>
+</a>
+
+        </nav>
+
+
+        <!-- PREMIUM CARD -->
+
+        <div class="sidebar-premium">
+
+            <i class="fas fa-crown"></i>
+
+            <h3>
+                Go Premium
+            </h3>
+
+            <p>
+                Unlock advanced analytics,
+                mock exams and certificates.
+            </p>
+
+            <button
+                type="button"
+                id="sidebarUpgradeBtn"
+            >
+
+                Upgrade
+
+                <i class="fas fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- LOGOUT -->
+
+        <button
+            type="button"
+            class="logout-btn"
+            id="logoutBtn"
+        >
+
+            <i class="fas fa-right-from-bracket"></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </aside>
+
+
+    <!-- MOBILE OVERLAY -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                >
+
+                    <i class="fas fa-bars"></i>
+
+                </button>
+
+
+                <div class="breadcrumb">
+
+                    <span>
+                        QuizCloud
+                    </span>
+
+                    <i class="fas fa-chevron-right"></i>
+
+                    <strong>
+                        My Progress
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <!-- Notification -->
+
+                <button
+                    type="button"
+                    class="notification-btn"
+                >
+
+                    <i class="far fa-bell"></i>
+
+                </button>
+
+
+                <!-- Profile -->
+
+                <div class="profile-area">
+
+                    <div
+                        class="profile-avatar"
+                    >
+                        KB
+                    </div>
+
+
+                    <div class="profile-details">
+
+                        <strong id="topUserName">
+                            Kushil Bangera
+                        </strong>
+
+                        <span id="topUserPlan">
+                            Free Plan
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PROGRESS PAGE
+        ================================================== -->
+
+        <div class="progress-page">
+
+            <div class="progress-container">
+
+
+                <!-- =================================================
+                     HERO
+                ================================================== -->
+
+                <section class="progress-hero">
+
+                    <div class="progress-hero-content">
+
+                        <div class="progress-eyebrow">
+
+                            <i class="fas fa-chart-line"></i>
+
+                            MY PROGRESS
+
+                        </div>
+
+
+                        <h1>
+                            Track Your Learning Journey
+                        </h1>
+
+
+                        <p>
+                            See your quiz performance,
+                            accuracy, XP and learning
+                            progress in one place.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     STATS
+                ================================================== -->
+
+                <section class="progress-stats">
+
+
+                    <!-- QUIZZES -->
+
+                    <div class="progress-stat-card">
+
+                        <div class="progress-stat-icon purple">
+
+                            <i class="fas fa-gamepad"></i>
+
+                        </div>
+
+
+                        <div class="progress-stat-content">
+
+                            <span>
+                                Quizzes Completed
+                            </span>
+
+                            <strong id="totalQuizzes">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ACCURACY -->
+
+                    <div class="progress-stat-card">
+
+                        <div class="progress-stat-icon green">
+
+                            <i class="fas fa-bullseye"></i>
+
+                        </div>
+
+
+                        <div class="progress-stat-content">
+
+                            <span>
+                                Average Accuracy
+                            </span>
+
+                            <strong id="averageAccuracy">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- XP -->
+
+                    <div class="progress-stat-card">
+
+                        <div class="progress-stat-icon orange">
+
+                            <i class="fas fa-star"></i>
+
+                        </div>
+
+
+                        <div class="progress-stat-content">
+
+                            <span>
+                                Total XP
+                            </span>
+
+                            <strong id="totalXP">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STREAK -->
+
+                    <div class="progress-stat-card">
+
+                        <div class="progress-stat-icon blue">
+
+                            <i class="fas fa-fire"></i>
+
+                        </div>
+
+
+                        <div class="progress-stat-content">
+
+                            <span>
+                                Current Streak
+                            </span>
+
+                            <strong id="currentStreak">
+                                0 days
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     ANALYTICS
+                ================================================== -->
+
+                <section class="progress-analytics">
+
+
+                    <!-- PERFORMANCE -->
+
+                    <div class="progress-panel">
+
+                        <div class="progress-panel-header">
+
+                            <div>
+
+                                <h2>
+                                    Your Quiz Performance
+                                </h2>
+
+                                <p>
+                                    Track your scores across
+                                    recent quizzes
+                                </p>
+
+                            </div>
+
+
+                            <select
+                                id="performanceFilter"
+                                class="chart-filter"
+                            >
+
+                                <option value="7">
+                                    Last 7 quizzes
+                                </option>
+
+                                <option value="30">
+                                    Last 30 quizzes
+                                </option>
+
+                                <option value="all">
+                                    All time
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div
+                            id="performanceChart"
+                            class="performance-chart"
+                        >
+
+                            <div class="progress-empty">
+
+                                <i class="fas fa-chart-line"></i>
+
+                                <div>
+                                    Your performance chart
+                                    will appear here.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACCURACY -->
+
+                    <div class="progress-panel accuracy-panel">
+
+                        <div class="progress-panel-header">
+
+                            <div>
+
+                                <h2>
+                                    Answer Accuracy
+                                </h2>
+
+                                <p>
+                                    Overall quiz accuracy
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="accuracy-circle">
+
+                            <div class="accuracy-value">
+
+                                <span id="accuracyPercentage">
+                                    0%
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="accuracy-breakdown">
+
+
+                            <div class="accuracy-item">
+
+                                <strong id="correctAnswers">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Correct
+                                </span>
+
+                            </div>
+
+
+                            <div class="accuracy-item">
+
+                                <strong id="wrongAnswers">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Wrong
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     SUBJECT PERFORMANCE
+                ================================================== -->
+
+                <section class="progress-panel subject-performance">
+
+
+                    <div class="progress-panel-header">
+
+                        <div>
+
+                            <h2>
+                                Subject Performance
+                            </h2>
+
+                            <p>
+                                See how you're performing
+                                across different subjects.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="subjectPerformance"
+                        class="subject-list"
+                    >
+
+                        <div class="progress-empty">
+
+                            <i class="fas fa-book-open"></i>
+
+                            <div>
+                                Complete quizzes to see
+                                subject performance.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     STRENGTHS / WEAKNESSES
+                ================================================== -->
+
+                <section class="insight-grid">
+
+
+                    <!-- STRENGTHS -->
+
+                    <div class="insight-card">
+
+                        <div class="insight-header">
+
+                            <div class="insight-icon strength">
+
+                                <i class="fas fa-arrow-trend-up"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h3>
+                                    Your Strengths
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="strengthList"
+                            class="insight-list"
+                        >
+
+                            <div class="progress-empty">
+
+                                Complete more quizzes
+                                to discover your strengths.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WEAKNESSES -->
+
+                    <div class="insight-card">
+
+                        <div class="insight-header">
+
+                            <div class="insight-icon weakness">
+
+                                <i class="fas fa-arrow-trend-down"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h3>
+                                    Areas to Improve
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="weaknessList"
+                            class="insight-list"
+                        >
+
+                            <div class="progress-empty">
+
+                                Complete more quizzes
+                                to identify areas
+                                for improvement.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     RECENT ATTEMPTS
+                ================================================== -->
+
+                <section class="recent-attempts">
+
+
+                    <div class="recent-header">
+
+                        <h2>
+                            Recent Quiz Attempts
+                        </h2>
+
+                    </div>
+
+
+                    <!-- TABLE HEADER -->
+
+                    <div class="attempt-row">
+
+                        <div>
+                            <strong>
+                                Quiz
+                            </strong>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Score
+                            </strong>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Accuracy
+                            </strong>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Date
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- GENERATED BY progress.js -->
+
+                    <div id="recentAttempts">
+
+                        <div class="progress-empty">
+
+                            <i class="fas fa-clipboard-list"></i>
+
+                            <h3>
+                                No quiz attempts yet
+                            </h3>
+
+                            <p>
+                                Complete your first quiz
+                                to start tracking progress.
+                            </p>
+
+
+                            <a
+                                href="quiz-selection.html"
+                                class="progress-premium-btn"
+                                style="
+                                    display:inline-flex;
+                                    text-decoration:none;
+                                    margin-top:12px;
+                                "
+                            >
+
+                                Start Learning
+
+                                <i
+                                    class="fas fa-arrow-right"
+                                    style="margin-left:8px;"
+                                ></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     PREMIUM ANALYTICS
+                ================================================== -->
+
+                <section class="progress-premium">
+
+
+                    <div>
+
+                        <h2>
+
+                            <i
+                                class="fas fa-crown"
+                                style="margin-right:8px;"
+                            ></i>
+
+                            Unlock Deeper Insights
+
+                        </h2>
+
+
+                        <p>
+                            Get detailed topic analytics,
+                            advanced performance reports,
+                            mock exam analysis and certificates.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="progress-premium-btn"
+                        id="upgradeProgressBtn"
+                    >
+
+                        <i class="fas fa-crown"></i>
+
+                        Upgrade to Premium
+
+                    </button>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     FOOTER
+                ================================================== -->
+
+                <footer
+                    style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        padding:25px 5px;
+                        color:#777990;
+                        font-size:12px;
+                    "
+                >
+
+                    <span>
+                        © 2026 QuizCloud
+                    </span>
+
+
+                    <div
+                        style="
+                            display:flex;
+                            gap:18px;
+                        "
+                    >
+
+                        <a
+                            href="#"
+                            style="
+                                color:inherit;
+                                text-decoration:none;
+                            "
+                        >
+                            Privacy
+                        </a>
+
+                        <a
+                            href="#"
+                            style="
+                                color:inherit;
+                                text-decoration:none;
+                            "
+                        >
+                            Terms
+                        </a>
+
+                        <a
+                            href="#"
+                            style="
+                                color:inherit;
+                                text-decoration:none;
+                            "
+                        >
+                            Help
+                        </a>
+
+                    </div>
+
+                </footer>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         PREMIUM MODAL
+    ====================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="premiumModal"
+        style="display:none;"
+    >
+
+        <div class="premium-modal">
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closePremiumModal"
+            >
+
+                <i class="fas fa-times"></i>
+
+            </button>
+
+
+            <div class="modal-icon">
+
+                <i class="fas fa-crown"></i>
+
+            </div>
+
+
+            <h2>
+                Unlock Premium Analytics
+            </h2>
+
+
+            <p>
+                Get deeper insights into your
+                learning performance.
+            </p>
+
+
+            <div class="premium-price">
+
+                <strong>
+                    ₹499
+                </strong>
+
+                <span>
+                    / plan
+                </span>
+
+            </div>
+
+
+            <div class="premium-benefits">
+
+                <div>
+
+                    <i class="fas fa-check"></i>
+
+                    Advanced analytics
+
+                </div>
+
+
+                <div>
+
+                    <i class="fas fa-check"></i>
+
+                    Topic performance
+
+                </div>
+
+
+                <div>
+
+                    <i class="fas fa-check"></i>
+
+                    Mock exam analytics
+
+                </div>
+
+
+                <div>
+
+                    <i class="fas fa-check"></i>
+
+                    Detailed reports
+
+                </div>
+
+
+                <div>
+
+                    <i class="fas fa-check"></i>
+
+                    Certificates
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="progress-premium-btn"
+                id="modalUpgradeBtn"
+            >
+
+                Upgrade Now
+
+                <i class="fas fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/auth.js?v=50"></script>
+
+    <script src="js/progress.js?v=50"></script>
+     <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const achievementsLink =
+        document.getElementById("achievementsLink");
+
+    if (achievementsLink) {
+        achievementsLink.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "achievements.html";
+        });
+    }
+
+});
+</script>
+
+</body>
+
+</html>

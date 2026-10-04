@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>QuizCloud — Quiz Arena</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Dashboard Base CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css?v=30"
+    >
+
+    <!-- Gamified Quiz Arena CSS -->
+    <link
+        rel="stylesheet"
+        href="css/quiz-selection.css?v=30"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+
+            <div class="logo-text">
+                <span>Quiz</span>Cloud
+            </div>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-grid-2"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a
+                href="quiz-selection.html"
+                class="nav-item active"
+            >
+                <i class="fas fa-gamepad"></i>
+                <span>Quiz Arena</span>
+            </a>
+
+            <a href="leaderboard.html" class="nav-item">
+                <i class="fas fa-trophy"></i>
+                <span>Leaderboard</span>
+            </a>
+
+            <a href="progress.html" class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>My Progress</span>
+            </a>
+
+            <a href="achievements.html" class="nav-item">
+                <i class="fas fa-medal"></i>
+                <span>Achievements</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Premium Sidebar -->
+
+        <div class="sidebar-premium">
+
+            <div class="sidebar-premium-icon">
+                <i class="fas fa-crown"></i>
+            </div>
+
+            <h4>Go Premium</h4>
+
+            <p>
+                Unlock advanced quizzes,
+                analytics and certificates.
+            </p>
+
+            <button
+                type="button"
+                id="sidebarUpgradeBtn"
+            >
+                Upgrade
+                <i class="fas fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="sidebar-logout"
+            id="logoutBtn"
+        >
+            <i class="fas fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </button>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+
+            <button
+                type="button"
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
+
+
+            <div class="topbar-left">
+
+                <div class="breadcrumb">
+                    <span>QuizCloud</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <strong>Quiz Arena</strong>
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button
+                    type="button"
+                    class="topbar-icon-btn"
+                >
+                    <i class="far fa-bell"></i>
+                </button>
+
+
+                <div class="topbar-profile">
+
+                    <div class="profile-avatar">
+                        KB
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong id="topUserName">
+                            Student
+                        </strong>
+
+                        <span id="topUserPlan">
+                            Free Plan
+                        </span>
+
+                    </div>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             QUIZ ARENA
+        ================================================== -->
+
+        <div class="quiz-selection-container">
+
+
+            <!-- Back -->
+
+            <button
+                type="button"
+                class="back-dashboard-btn"
+                id="backDashboardBtn"
+            >
+                <i class="fas fa-arrow-left"></i>
+                Back to Dashboard
+            </button>
+
+
+            <!-- =================================================
+                 ARENA HEADER
+            ================================================== -->
+
+            <section class="quiz-selection-header">
+
+                <div class="header-content">
+
+                    <span class="section-label">
+                        <i class="fas fa-gamepad"></i>
+                        QUIZ ARENA
+                    </span>
+
+                    <h1>
+                        Choose Your Challenge
+                    </h1>
+
+                    <p>
+                        Pick your mission, test your knowledge,
+                        earn XP and climb the leaderboard.
+                    </p>
+
+                </div>
+
+
+                <!-- Arena HUD -->
+
+                <div class="arena-hud">
+
+                    <div class="arena-stat streak">
+
+                        <i class="fas fa-fire"></i>
+
+                        <div>
+                            <strong id="arenaStreak">
+                                7
+                            </strong>
+
+                            <span>
+                                Streak
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="arena-stat xp">
+
+                        <i class="fas fa-star"></i>
+
+                        <div>
+                            <strong id="arenaXP">
+                                840
+                            </strong>
+
+                            <span>
+                                XP
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MISSION SELECTOR
+            ================================================== -->
+
+            <section class="selection-card">
+
+
+                <!-- Header -->
+
+                <div class="selection-card-header">
+
+                    <div class="selection-header-icon">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Select Your Mission
+                        </h2>
+
+                        <p>
+                            Build your challenge by choosing
+                            your learning path.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     STEP 01
+                ================================================== -->
+
+                <div class="selection-step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-content">
+
+                        <label for="educationLevel">
+
+                            <i class="fas fa-graduation-cap"></i>
+
+                            Education Level
+
+                        </label>
+
+
+                        <select
+                            id="educationLevel"
+                            class="selection-dropdown"
+                        >
+
+                            <option value="">
+                                Choose level
+                            </option>
+
+                        </select>
+
+
+                        <small>
+                            Select your education level
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     STEP 02
+                ================================================== -->
+
+                <div class="selection-step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-content">
+
+                        <label for="stream">
+
+                            <i class="fas fa-layer-group"></i>
+
+                            Stream
+
+                        </label>
+
+
+                        <select
+                            id="stream"
+                            class="selection-dropdown"
+                            disabled
+                        >
+
+                            <option value="">
+                                Choose stream
+                            </option>
+
+                        </select>
+
+
+                        <small>
+                            Select your academic stream
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     STEP 03
+                ================================================== -->
+
+                <div class="selection-step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-content">
+
+                        <label for="subject">
+
+                            <i class="fas fa-book-open"></i>
+
+                            Subject
+
+                        </label>
+
+
+                        <select
+                            id="subject"
+                            class="selection-dropdown"
+                            disabled
+                        >
+
+                            <option value="">
+                                Choose subject
+                            </option>
+
+                        </select>
+
+
+                        <small>
+                            Choose what you want to study
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     STEP 04
+                ================================================== -->
+
+                <div class="selection-step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <div class="step-content">
+
+                        <label for="topic">
+
+                            <i class="fas fa-bolt"></i>
+
+                            Topic
+
+                        </label>
+
+
+                        <select
+                            id="topic"
+                            class="selection-dropdown"
+                            disabled
+                        >
+
+                            <option value="">
+                                Choose topic
+                            </option>
+
+                        </select>
+
+
+                        <small>
+                            Select your final challenge
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 QUIZ RESULTS HEADER
+            ================================================== -->
+
+            <section class="quiz-results-header">
+
+                <div>
+
+                    <span class="section-label">
+                        AVAILABLE MISSIONS
+                    </span>
+
+                    <h2>
+                        Choose Your Battle
+                    </h2>
+
+                </div>
+
+
+                <div class="quiz-count-box">
+
+                    <i class="fas fa-layer-group"></i>
+
+                    <span id="quizCount">
+                        0
+                    </span>
+
+                    <span>
+                        Quizzes
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 LOADING
+            ================================================== -->
+
+            <div
+                id="loadingMessage"
+                class="loading-message"
+                style="display:none;"
+            >
+
+                <div class="loading-spinner">
+
+                    <i class="fas fa-spinner fa-spin"></i>
+
+                </div>
+
+                <div>
+                    Loading missions...
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 QUIZ GRID
+            ================================================== -->
+
+            <section
+                id="quizGrid"
+                class="quiz-grid"
+            >
+                <!-- Quiz cards are generated by quiz-selection.js -->
+            </section>
+
+
+            <!-- =================================================
+                 NO QUIZZES
+            ================================================== -->
+
+            <div
+                id="noQuizzesMessage"
+                class="empty-quiz-state"
+                style="display:none;"
+            >
+
+                <div class="empty-icon">
+                    <i class="fas fa-ghost"></i>
+                </div>
+
+                <h3>
+                    No Missions Available
+                </h3>
+
+                <p>
+                    Try selecting another subject
+                    or topic to find available quizzes.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 PREMIUM ARENA
+            ================================================== -->
+
+            <section class="selection-premium-banner">
+
+                <div class="premium-banner-icon">
+
+                    <i class="fas fa-crown"></i>
+
+                </div>
+
+
+                <div class="premium-banner-content">
+
+                    <span>
+                        PREMIUM ARENA
+                    </span>
+
+                    <h3>
+                        Unlock the Ultimate Challenge
+                    </h3>
+
+                    <p>
+                        Get unlimited quizzes, advanced
+                        explanations, analytics, mock exams,
+                        certificates and more.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="premium-btn"
+                    id="upgradeBtn"
+                >
+
+                    <i class="fas fa-crown"></i>
+
+                    Go Premium
+
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="dashboard-footer">
+
+                <span>
+                    © 2026 QuizCloud
+                </span>
+
+                <div>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                    <a href="#">
+                        Help
+                    </a>
+
+                </div>
+
+            </footer>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         PREMIUM MODAL
+    ====================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="premiumModal"
+        style="display:none;"
+    >
+
+        <div class="premium-modal">
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closePremiumModal"
+            >
+                <i class="fas fa-times"></i>
+            </button>
+
+
+            <div class="modal-icon">
+                <i class="fas fa-crown"></i>
+            </div>
+
+
+            <h2>
+                Enter the Premium Arena
+            </h2>
+
+
+            <p>
+                Unlock unlimited quiz attempts and
+                advanced learning features.
+            </p>
+
+
+            <div class="premium-price">
+
+                <strong>
+                    ₹499
+                </strong>
+
+                <span>
+                    / plan
+                </span>
+
+            </div>
+
+
+            <div class="premium-benefits">
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Unlimited quizzes
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Detailed explanations
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Advanced analytics
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Mock exams
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Certificates
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="premium-btn"
+                id="modalUpgradeBtn"
+            >
+                Upgrade Now
+                <i class="fas fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script src="js/auth.js?v=30"></script>
+
+    <script src="js/quiz-selection.js?v=30"></script>
+
+
+    <!-- =====================================================
+         MOBILE MENU
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const menuBtn =
+                    document.getElementById(
+                        "mobileMenuBtn"
+                    );
+
+                const sidebar =
+                    document.getElementById(
+                        "sidebar"
+                    );
+
+                const overlay =
+                    document.getElementById(
+                        "sidebarOverlay"
+                    );
+
+
+                if (menuBtn && sidebar) {
+
+                    menuBtn.addEventListener(
+                        "click",
+                        function () {
+
+                            sidebar.classList.toggle(
+                                "mobile-open"
+                            );
+
+                            if (overlay) {
+
+                                overlay.classList.toggle(
+                                    "active"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+                if (overlay) {
+
+                    overlay.addEventListener(
+                        "click",
+                        function () {
+
+                            sidebar.classList.remove(
+                                "mobile-open"
+                            );
+
+                            overlay.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+                }
+
+
+                const backBtn =
+                    document.getElementById(
+                        "backDashboardBtn"
+                    );
+
+                if (backBtn) {
+
+                    backBtn.addEventListener(
+                        "click",
+                        function () {
+
+                            window.location.href =
+                                "dashboard.html";
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
