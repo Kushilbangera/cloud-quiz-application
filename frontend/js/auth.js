@@ -1,6 +1,6 @@
 const SESSION_KEY = "quizcloud_user";
 const LEGACY_SESSION_KEY = "quizcloud_session";
-const AUTH_API_BASE = "http://localhost:5001/api";
+const AUTH_API_BASE ="https://cloud-quiz-backend-o7t9.onrender.com/api";
 
 function setSession(user) {
     const value = JSON.stringify(user);

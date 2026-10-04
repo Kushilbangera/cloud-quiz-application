@@ -2,7 +2,7 @@
    QUIZCLOUD — ACHIEVEMENTS
    ========================================================= */
 
-const API_BASE = "http://localhost:5001/api";
+const API_BASE ="https://cloud-quiz-backend-o7t9.onrender.com/api";
 
 /* =========================================================
    ACHIEVEMENT DEFINITIONS
